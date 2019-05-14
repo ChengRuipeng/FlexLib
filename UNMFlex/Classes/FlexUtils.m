@@ -69,6 +69,25 @@ UIColor* systemColor(NSString* clr)
 UIColor* colorFromString(NSString* clr,
                          NSObject* owner)
 {
+    if([clr hasPrefix:@"rgba"]) {
+        // rgba(255,31,31,1)
+        // 解析出 255 31 31
+        NSString *colorString = [clr substringWithRange:NSMakeRange(5, [clr length] - 6)];
+        NSArray *array = [colorString componentsSeparatedByString:@","]; //字符串按照【分隔成数组
+        
+        CGFloat r = [array[0] floatValue];
+        CGFloat g = [array[1] floatValue];
+        CGFloat b = [array[2] floatValue];
+        CGFloat a = [array[3] floatValue];
+        
+        //        return [UIColor colorWithRed: r / 255.0f
+        //                               green: g / 255.0f
+        //                                blue: b / 255.0f
+        //                               alpha: a / 255.0f];
+        
+        return [UIColor colorWithRed:r/255 green:g/255 blue:b/255 alpha:a];
+        
+    }
     if(![clr hasPrefix:@"#"]){
         
         if([clr rangeOfString:@"."].length>0){
@@ -140,7 +159,7 @@ UIFont* fontFromString(NSString* fontStr)
     else if([@"italic" compare:fontName]==NSOrderedSame){
         
         font = [UIFont italicSystemFontOfSize:fontSize];
-    
+        
     }else{
         font = [UIFont fontWithName:fontName size:fontSize];
     }
@@ -301,7 +320,7 @@ FlexLanuage FlexGetLanguage(void)
 -(void)show:(CGFloat)durationInSec
 {
     UIWindow* window =  [UIApplication sharedApplication].keyWindow;
-
+    
     [window addSubview:self.label];
     [window bringSubviewToFront:self.label];
     [UIView animateWithDuration:0.4 delay:durationInSec options:UIViewAnimationOptionCurveEaseIn animations:^{

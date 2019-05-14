@@ -155,7 +155,7 @@
 
 /* Begin PBXFileReference section */
 		00F5973A56BDF865381106A0390F69EB /* UIActivityIndicatorView+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+Flex.h"; sourceTree = "<group>"; };
-		0153F48DA033F1D21B5AB8BF219653A9 /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = yoga.framework; path = Yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0153F48DA033F1D21B5AB8BF219653A9 /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03638CB75520994A825BE5D7E97FBD1B /* UILabel+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Flex.m"; sourceTree = "<group>"; };
 		0788B85D7BC53BAA52642BC99688FB06 /* FlexXmlBaseView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexXmlBaseView.h; path = UNMFlex/Classes/FlexXmlBaseView.h; sourceTree = "<group>"; };
 		0E278D49BD3A19674FBD00B6A91BA7FB /* UIScrollView+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Flex.h"; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		0ECCBF6F47A8BDD9776A6AEF68047A0D /* GDataXMLNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = UNMFlex/Classes/GDataXMLNode.h; sourceTree = "<group>"; };
 		12761F8B70A16E81FF8A4DF2270C7ABB /* YGLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = YGLayout.h; sourceTree = "<group>"; };
 		12AE4FDF1D370369AE3B8147E970CEEB /* FlexTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexTextView.h; path = UNMFlex/Classes/FlexTextView.h; sourceTree = "<group>"; };
-		12FC47F71C28E0E97FCA2FF54C2C397D /* Pods_UNMFlex_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UNMFlex_Example.framework; path = "Pods-UNMFlex_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12FC47F71C28E0E97FCA2FF54C2C397D /* Pods_UNMFlex_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UNMFlex_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1355AE93D425EE318103E87EB0D5F6BF /* Yoga-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Yoga-umbrella.h"; sourceTree = "<group>"; };
 		14C9A780490C0AC02EAF9BFCC7F47881 /* FlexLayoutViewerVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexLayoutViewerVC.m; path = UNMFlex/Classes/FlexLayoutViewerVC.m; sourceTree = "<group>"; };
 		1A8344205FC8418C44EED925188A0900 /* UIPageControl+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIPageControl+Flex.m"; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 		1E9998BD7EF95769F38475322C5A003F /* FlexUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexUtils.m; path = UNMFlex/Classes/FlexUtils.m; sourceTree = "<group>"; };
 		1EF4B83629004D33A28F3078F0E1E279 /* UITextView+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Flex.m"; sourceTree = "<group>"; };
 		274B730118A7EA4D2935473C9091329A /* FlexHttpVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexHttpVC.m; path = UNMFlex/Classes/FlexHttpVC.m; sourceTree = "<group>"; };
-		27675226396142A680E82062771F9E50 /* FlexHttpVC.xml */ = {isa = PBXFileReference; includeInIndex = 1; name = FlexHttpVC.xml; path = UNMFlex/Assets/FlexHttpVC.xml; sourceTree = "<group>"; };
+		27675226396142A680E82062771F9E50 /* FlexHttpVC.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = FlexHttpVC.xml; path = UNMFlex/Assets/FlexHttpVC.xml; sourceTree = "<group>"; };
 		28275778FC537B0AB4687A18DBC74A52 /* Yoga-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Yoga-prefix.pch"; sourceTree = "<group>"; };
 		285EB9DCD9065F14BE95220B34FD882F /* Pods-UNMFlex_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UNMFlex_Example.release.xcconfig"; sourceTree = "<group>"; };
 		291F7C2CA5B2E1F3E9D7E77FE580AED5 /* UIView+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+Flex.m"; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		403CE924ACB8E2AD0D69DD4734FCEE37 /* FlexScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexScrollView.m; path = UNMFlex/Classes/FlexScrollView.m; sourceTree = "<group>"; };
 		419AE8E571EAC3C6ED419A27E8C6CB5E /* UIView+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Flex.h"; sourceTree = "<group>"; };
 		434640BAE78605FE6F297137488F7160 /* FlexBaseTableCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexBaseTableCell.h; path = UNMFlex/Classes/FlexBaseTableCell.h; sourceTree = "<group>"; };
-		443E6C3BE0582B18FA3E76CE5941199A /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "UNMFlex/Assets/zh-Hans.lproj"; sourceTree = "<group>"; };
+		443E6C3BE0582B18FA3E76CE5941199A /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = "zh-Hans.lproj"; path = "UNMFlex/Assets/zh-Hans.lproj"; sourceTree = "<group>"; };
 		49E0DD7BCA11E96DB20FBDB464815480 /* UISwitch+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISwitch+Flex.m"; sourceTree = "<group>"; };
 		49F3C64A1D81AC39485BE765035D29E4 /* UNMFlex.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UNMFlex.modulemap; sourceTree = "<group>"; };
 		4DC01BDA7C234D0F929AA077A61D351B /* FlexLayoutViewerVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexLayoutViewerVC.h; path = UNMFlex/Classes/FlexLayoutViewerVC.h; sourceTree = "<group>"; };
@@ -207,10 +207,10 @@
 		5BC86D39112E3DF3AA6047F7932407EE /* UIButton+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIButton+Flex.h"; sourceTree = "<group>"; };
 		5BD71EF103A9FE6DD091AADCA4650410 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5BED69AA5D580F6C4BE6EDC5E3AF2427 /* UNMFlex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UNMFlex-dummy.m"; sourceTree = "<group>"; };
-		5C747F11FDA620EE3DED791013E4B82F /* FlexSetPreviewVC.xml */ = {isa = PBXFileReference; includeInIndex = 1; name = FlexSetPreviewVC.xml; path = UNMFlex/Assets/FlexSetPreviewVC.xml; sourceTree = "<group>"; };
+		5C747F11FDA620EE3DED791013E4B82F /* FlexSetPreviewVC.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = FlexSetPreviewVC.xml; path = UNMFlex/Assets/FlexSetPreviewVC.xml; sourceTree = "<group>"; };
 		5E3B6FCCF82A41C7D833934AF051ED32 /* FlexSetPreviewVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexSetPreviewVC.m; path = UNMFlex/Classes/FlexSetPreviewVC.m; sourceTree = "<group>"; };
 		5F0F2F2941882822932DB21154AE39AE /* FlexBaseVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexBaseVC.h; path = UNMFlex/Classes/FlexBaseVC.h; sourceTree = "<group>"; };
-		6178CC5B37C658D1E6EF028D9246002D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6178CC5B37C658D1E6EF028D9246002D /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		620AEF36B159884681EF35C2C8902B01 /* UISlider+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISlider+Flex.m"; sourceTree = "<group>"; };
 		63385AD945EF8672EC7C26FF48F84257 /* UIDatePicker+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIDatePicker+Flex.h"; sourceTree = "<group>"; };
 		65C6B3E23A553B7BE0C32C41F9E88475 /* UNMFlex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UNMFlex-Info.plist"; sourceTree = "<group>"; };
@@ -227,13 +227,13 @@
 		787F2B6262AA160BF7879F568FDAB38E /* UIStepper+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIStepper+Flex.h"; sourceTree = "<group>"; };
 		78AE8E272B53F71A05D2A4DEE0F26578 /* FlexStyleMgr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexStyleMgr.h; path = UNMFlex/Classes/FlexStyleMgr.h; sourceTree = "<group>"; };
 		7B29D516575F8F322DDEB9A67B632B36 /* UISlider+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISlider+Flex.h"; sourceTree = "<group>"; };
-		80C289B45A50137D60DEEF561C85AE52 /* Yoga.c */ = {isa = PBXFileReference; includeInIndex = 1; name = Yoga.c; path = yoga/Yoga.c; sourceTree = "<group>"; };
+		80C289B45A50137D60DEEF561C85AE52 /* Yoga.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = Yoga.c; path = yoga/Yoga.c; sourceTree = "<group>"; };
 		81CBEBB3FDCBAFBC9E59D85293CEB39A /* FlexNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexNode.m; path = UNMFlex/Classes/FlexNode.m; sourceTree = "<group>"; };
 		82394148120E762724B04BB6FB178EFE /* UIPageControl+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIPageControl+Flex.h"; sourceTree = "<group>"; };
 		83C5BD74A4EA3E1F67D9981C8BCE4085 /* UIStepper+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIStepper+Flex.m"; sourceTree = "<group>"; };
 		88064A74B43F8511353229C559F46251 /* UIImageView+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Flex.m"; sourceTree = "<group>"; };
 		888BE803CFDE67786EE5B250DFA426DC /* FlexTouchView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexTouchView.m; path = UNMFlex/Classes/FlexTouchView.m; sourceTree = "<group>"; };
-		88BBF77D1C7B3A8B5F6261A54E650A05 /* FlexLayoutViewerVC.xml */ = {isa = PBXFileReference; includeInIndex = 1; name = FlexLayoutViewerVC.xml; path = UNMFlex/Assets/FlexLayoutViewerVC.xml; sourceTree = "<group>"; };
+		88BBF77D1C7B3A8B5F6261A54E650A05 /* FlexLayoutViewerVC.xml */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = FlexLayoutViewerVC.xml; path = UNMFlex/Assets/FlexLayoutViewerVC.xml; sourceTree = "<group>"; };
 		8B5214C7D8EAA25453FD6C6FCEBAB16D /* ResourceBundle-UNMFlex-UNMFlex-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-UNMFlex-UNMFlex-Info.plist"; sourceTree = "<group>"; };
 		8D8B93F9D8320F9E22B69C32D5009A3A /* YGNodeList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGNodeList.h; path = yoga/YGNodeList.h; sourceTree = "<group>"; };
 		8E5AB1327281C573010CD787CBB67E63 /* UITextView+Flex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UITextView+Flex.h"; sourceTree = "<group>"; };
@@ -242,15 +242,15 @@
 		9476E31C7F53D8EE9225D4FCA23ED236 /* UIDatePicker+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIDatePicker+Flex.m"; sourceTree = "<group>"; };
 		9578D611098872511367703D1149E2F5 /* Yoga.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Yoga.xcconfig; sourceTree = "<group>"; };
 		95EB77C42370515FE7139FFEC0F1D5E8 /* FlexModalView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexModalView.h; path = UNMFlex/Classes/FlexModalView.h; sourceTree = "<group>"; };
-		96ADE6AB37F5C8BF7F3D74A9FFCB775F /* UNMFlex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UNMFlex.framework; path = UNMFlex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96ADE6AB37F5C8BF7F3D74A9FFCB775F /* UNMFlex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UNMFlex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97AFDA992BE4C8D6833F3FC3975784E6 /* UITextField+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Flex.m"; sourceTree = "<group>"; };
 		99B90BFF6B1271CACDCC24E113FC76FF /* GDataXMLNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = UNMFlex/Classes/GDataXMLNode.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A35DC0CC658FC026C044F8BD617CD906 /* UNMFlex.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UNMFlex.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A35DC0CC658FC026C044F8BD617CD906 /* UNMFlex.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = UNMFlex.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC2C6C9BDB2AF33E1CE11D2CF5CDE9B3 /* FlexFrameView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexFrameView.m; path = UNMFlex/Classes/FlexFrameView.m; sourceTree = "<group>"; };
 		B04360F75355BEB61A833C88E34CEF25 /* Pods-UNMFlex_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UNMFlex_Example-Info.plist"; sourceTree = "<group>"; };
-		B065F7AB540F78016D12346904020047 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		B3FBE0382BA37BBE645FBC61A9F31DE0 /* UNMFlex.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = UNMFlex.bundle; path = "UNMFlex-UNMFlex.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B065F7AB540F78016D12346904020047 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B3FBE0382BA37BBE645FBC61A9F31DE0 /* UNMFlex.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UNMFlex.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63B70A22C581AD37D78436AC8116FFB /* YGMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YGMacros.h; path = yoga/YGMacros.h; sourceTree = "<group>"; };
 		B932E7BA1E935A72101E9D043F0B1EDA /* UIScrollView+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Flex.m"; sourceTree = "<group>"; };
 		B99169FB512CD25D73E97211DC07E720 /* FlexXmlBaseView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexXmlBaseView.m; path = UNMFlex/Classes/FlexXmlBaseView.m; sourceTree = "<group>"; };
@@ -273,12 +273,12 @@
 		DBFCDF71D371F7CF1D493188BD5DC880 /* UIPickerView+Flex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIPickerView+Flex.m"; sourceTree = "<group>"; };
 		DC6AEA68887343B95D59F656704781CC /* FlexRootView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexRootView.m; path = UNMFlex/Classes/FlexRootView.m; sourceTree = "<group>"; };
 		E2914CC0432D1B9B04150FB589D315A5 /* yoga.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = yoga.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE2FEBDFE75D838F454B54ECE72CFCB7 /* YGEnums.c */ = {isa = PBXFileReference; includeInIndex = 1; name = YGEnums.c; path = yoga/YGEnums.c; sourceTree = "<group>"; };
+		EE2FEBDFE75D838F454B54ECE72CFCB7 /* YGEnums.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = YGEnums.c; path = yoga/YGEnums.c; sourceTree = "<group>"; };
 		F0B695D1E86B6CF798D114130DF92EC0 /* FlexUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexUtils.h; path = UNMFlex/Classes/FlexUtils.h; sourceTree = "<group>"; };
 		F0F67482C30A784CE5A856B897529843 /* FlexLib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexLib.h; path = UNMFlex/Classes/FlexLib.h; sourceTree = "<group>"; };
 		F1B752D3378EC9A2972696A0AFC878B3 /* Pods-UNMFlex_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UNMFlex_Example.modulemap"; sourceTree = "<group>"; };
-		F21BA63FC86FB0345A8A42DE6BACBE31 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = Base.lproj; path = UNMFlex/Assets/Base.lproj; sourceTree = "<group>"; };
-		F32361476E6F738901764FFFD6CDA2C0 /* YGNodeList.c */ = {isa = PBXFileReference; includeInIndex = 1; name = YGNodeList.c; path = yoga/YGNodeList.c; sourceTree = "<group>"; };
+		F21BA63FC86FB0345A8A42DE6BACBE31 /* Base.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = Base.lproj; path = UNMFlex/Assets/Base.lproj; sourceTree = "<group>"; };
+		F32361476E6F738901764FFFD6CDA2C0 /* YGNodeList.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = YGNodeList.c; path = yoga/YGNodeList.c; sourceTree = "<group>"; };
 		F4E38F3DFBAD60E750029035A3CBA0DE /* FlexCollectionCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FlexCollectionCell.m; path = UNMFlex/Classes/FlexCollectionCell.m; sourceTree = "<group>"; };
 		F5677CD273F584E0129FD4D50444F369 /* FlexHttpVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexHttpVC.h; path = UNMFlex/Classes/FlexHttpVC.h; sourceTree = "<group>"; };
 		F600DCFB3C27A65819D816CAC373D646 /* FlexTouchMaskView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FlexTouchMaskView.h; path = UNMFlex/Classes/FlexTouchMaskView.h; sourceTree = "<group>"; };
@@ -405,7 +405,6 @@
 				707E020282DBFC8F97620A7FF0DD7A0C /* Yoga.h */,
 				59E6038DB17D6FFC06F49E8A14DD1CD3 /* Support Files */,
 			);
-			name = Yoga;
 			path = Yoga;
 			sourceTree = "<group>";
 		};
@@ -770,6 +769,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
@@ -1273,8 +1273,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
