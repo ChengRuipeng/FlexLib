@@ -1,0 +1,44 @@
+{
+  "name": "UNMFlex",
+  "version": "5.0.0",
+  "summary": "An obj-c flex layout framework for IOS",
+  "description": "It's a layout framework based on yoga engine. The main purpose is to provide easy and fast usage.",
+  "homepage": "https://github.com/ChengRuipeng/UNMFlex",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "974098768@qq.com": "974098768@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/ChengRuipeng/UNMFlex.git",
+    "tag": "5.0.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "UNMFlex/Classes/**/*",
+  "resource_bundles": {
+    "UNMFlex": [
+      "UNMFlex/Assets/*"
+    ]
+  },
+  "dependencies": {
+    "Yoga": [
+      "1.6.0"
+    ]
+  },
+  "libraries": "xml2",
+  "xcconfig": {
+    "HEADER_SEARCH_PATHS": "/usr/include/libxml2"
+  },
+  "exclude_files": "UNMFlex/Classes/GDataXMLNode.{h,m}",
+  "subspecs": [
+    {
+      "name": "no-arc",
+      "requires_arc": false,
+      "source_files": "UNMFlex/Classes/GDataXMLNode.{h,m}"
+    }
+  ]
+}

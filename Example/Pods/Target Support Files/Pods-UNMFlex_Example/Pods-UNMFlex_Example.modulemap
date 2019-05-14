@@ -1,0 +1,6 @@
+framework module Pods_UNMFlex_Example {
+  umbrella header "Pods-UNMFlex_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
