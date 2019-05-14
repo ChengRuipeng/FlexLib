@@ -266,7 +266,7 @@ double GetAccurateSecondsSince1970()
 NSBundle* FlexBundle(void)
 {
     NSString* flexPath = [[NSBundle bundleForClass:[FlexBaseVC class]]resourcePath];
-    flexPath = [flexPath stringByAppendingPathComponent:@"FlexLib.bundle"];
+    flexPath = [flexPath stringByAppendingPathComponent:@"UNMFlex.bundle"];
     return [NSBundle bundleWithPath:flexPath];
 }
 FlexLanuage FlexGetLanguage(void)

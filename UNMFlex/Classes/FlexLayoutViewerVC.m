@@ -141,7 +141,7 @@
     NSString* flexName = NSStringFromClass([FlexLayoutViewerVC class]);
     
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[FlexLayoutViewerVC class]];
-    NSString *resourcePath = [frameworkBundle pathForResource:flexName ofType:@"xml" inDirectory:@"FlexLib.bundle"];
+    NSString *resourcePath = [frameworkBundle pathForResource:flexName ofType:@"xml" inDirectory:@"UNMFlex.bundle"];
     
     FlexLayoutViewerVC* vc = [[FlexLayoutViewerVC alloc]initWithFlexName:resourcePath];
     

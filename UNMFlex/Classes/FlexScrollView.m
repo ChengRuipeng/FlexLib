@@ -44,7 +44,7 @@ static void* gObserverContentOffset = &gObserverContentOffset;
         
         // 占位的view
         _holder = [[UIView alloc]init];
-        [_holder enableFlexLayout:YES];
+        _holder.yoga.isEnabled = YES;
         [super addSubview:_holder];
         
         // 构造view tree
@@ -66,6 +66,7 @@ static void* gObserverContentOffset = &gObserverContentOffset;
         
         [self addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew|NSKeyValueObservingOptionOld context:gObserverFrame];
         [self addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:gObserverContentOffset];
+        self.backgroundColor = UIColor.whiteColor;
     }
     return self;
 }
@@ -131,11 +132,11 @@ static void* gObserverContentOffset = &gObserverContentOffset;
     
 #define COPYYGVALUE(prop)           \
 if(from.prop.unit==YGUnitPoint||    \
-    from.prop.unit==YGUnitPercent)  \
+from.prop.unit==YGUnitPercent)  \
 {                                   \
-    to.prop = from.prop;            \
+to.prop = from.prop;            \
 }                                   \
-    
+
     //同步yoga属性
     YGLayout* from = self.yoga ;
     YGLayout* to = _contentView.yoga ;

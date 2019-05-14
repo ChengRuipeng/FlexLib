@@ -240,7 +240,7 @@ void createFlexIndex(NSString* url,
     NSString* flexName = NSStringFromClass([FlexSetPreviewVC class]);
     
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[FlexSetPreviewVC class]];
-    NSString *resourcePath = [frameworkBundle pathForResource:flexName ofType:@"xml" inDirectory:@"FlexLib.bundle"];
+    NSString *resourcePath = [frameworkBundle pathForResource:flexName ofType:@"xml" inDirectory:@"UNMFlex.bundle"];
     
     FlexSetPreviewVC* vc = [[FlexSetPreviewVC alloc]initWithFlexName:resourcePath];
     

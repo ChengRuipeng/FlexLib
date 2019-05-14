@@ -115,7 +115,7 @@
     NSString* flexName = NSStringFromClass([FlexHttpVC class]);
     
     NSBundle *frameworkBundle = [NSBundle bundleForClass:[FlexHttpVC class]];
-    NSString *resourcePath = [frameworkBundle pathForResource:flexName ofType:@"xml" inDirectory:@"FlexLib.bundle"];
+    NSString *resourcePath = [frameworkBundle pathForResource:flexName ofType:@"xml" inDirectory:@"UNMFlex.bundle"];
     
     return resourcePath;
 }
