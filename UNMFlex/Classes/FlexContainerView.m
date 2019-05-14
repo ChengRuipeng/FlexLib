@@ -8,7 +8,7 @@
  */
 
 #import "FlexContainerView.h"
-#import "FlexRootView.h"
+#import "YogaKit/UIView+Yoga.h"
 
 @implementation FlexContainerView
 
@@ -16,7 +16,7 @@
 {
     for (UIView* subview in self.subviews) {
         if(!subview.hidden &&
-           [subview isFlexLayoutEnable])
+           subview.yoga.isIncludedInLayout)
         {
             return [super sizeThatFits:size];
         }

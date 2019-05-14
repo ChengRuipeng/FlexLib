@@ -65,7 +65,6 @@
     [self configureLayoutWithBlock:^(YGLayout* layout){
         
         layout.isEnabled = YES;
-        layout.isIncludedInLayout = YES;
         
         NSArray<FlexAttr*>* layoutParam = node.layoutParams ;
         
