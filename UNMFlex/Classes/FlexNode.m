@@ -17,8 +17,7 @@
 #import "FlexRootView.h"
 #import "FlexModalView.h"
 #import "ViewExt/UIView+Flex.h"
-#import <objc/runtime.h>
-#import <objc/message.h>
+
 #define VIEWCLSNAME     @"viewClsName"
 #define NAME            @"name"
 #define ONPRESS         @"onPress"
@@ -48,7 +47,6 @@ static BOOL gbUserCache = YES;
 static NSDictionary* gFlexIndex = nil;
 static NSString* gBaseUrl = nil;
 
-
 static NameValue _direction[] =
 {{"inherit", YGDirectionInherit},
  {"ltr", YGDirectionLTR},
@@ -66,6 +64,7 @@ static NameValue _justify[] =
     {"flex-end", YGJustifyFlexEnd},
     {"space-between", YGJustifySpaceBetween},
     {"space-around", YGJustifySpaceAround},
+    {"space-evenly", YGJustifySpaceEvenly},
 };
 static NameValue _align[] =
 {   {"auto", YGAlignAuto},
@@ -186,10 +185,9 @@ void FlexSetViewAttr(UIView* view,
                      NSString* attrValue,
                      NSObject* owner)
 {
-    
     NSString* methodDesc = [NSString stringWithFormat:@"setFlex%@:Owner:",attrName];
     
-    SEL sel = NSSelectorFromString(methodDesc);
+    SEL sel = NSSelectorFromString(methodDesc) ;
     if(sel == nil)
     {
         NSLog(@"Flexbox: %@ no method %@",[view class],methodDesc);
@@ -201,17 +199,9 @@ void FlexSetViewAttr(UIView* view,
     NSMethodSignature* sig = [[view class] instanceMethodSignatureForSelector:sel];
     if(sig == nil)
     {
-        methodDesc = [NSString stringWithFormat:@"setFlex%@WithSValue:Owner:",attrName];
-        sel = NSSelectorFromString(methodDesc);
-        sig = [[view class] instanceMethodSignatureForSelector:sel];
-        if(sig == nil)
-        {
-            NSLog(@"Flexbox: %@ no method %@",[view class],methodDesc);
-            return;
-        }
+        NSLog(@"Flexbox: %@ no method %@",[view class],methodDesc);
+        return ;
     }
-    
-    NSLog(@"%@", methodDesc);
     
     attrValue = FlexProcessAttrValue(attrName,attrValue, owner);
     
@@ -268,6 +258,7 @@ SETENUMVALUE(flexWrap,_wrap,YGWrap);
 SETENUMVALUE(overflow,_overflow,YGOverflow);
 SETENUMVALUE(display,_display,YGDisplay);
 
+    SETNUMVALUE(flex);
     SETNUMVALUE(flexGrow);
     SETNUMVALUE(flexShrink);
     
@@ -325,11 +316,7 @@ void FlexApplyLayoutParam(YGLayout* layout,
                           NSString* key,
                           NSString* value)
 {
-    if( [@"flex" compare:key options:NSLiteralSearch]==NSOrderedSame)
-    {
-        ApplyLayoutParam(layout, @"flexShrink", value);
-        ApplyLayoutParam(layout, @"flexGrow", value);
-    }else if( [@"margin" compare:key options:NSLiteralSearch]==NSOrderedSame){
+    if( [@"margin" compare:key options:NSLiteralSearch]==NSOrderedSame){
         
         NSArray* ary = [value componentsSeparatedByString:@"/"];
         if( ary.count==1 ){
@@ -397,20 +384,6 @@ void FlexApplyLayoutParam(YGLayout* layout,
         return nil;
     }
     Class cls = NSClassFromString(self.viewClassName) ;
-    
-//    targetClassString = [NSString stringWithFormat:@"%@.%@", @"gui", self.viewClassName];
-//
-//    Class targetClass = NSClassFromString(targetClassString);
-    
-    if (cls == nil) {
-        NSString *targetClassString = nil;
-        targetClassString = [NSString stringWithFormat:@"%@.%@", @"gui", self.viewClassName];
-        cls = NSClassFromString(targetClassString);
-    }
-   
-    
-    
-    
     if(cls == nil){
         NSLog(@"Flexbox: class %@ not found.", self.viewClassName);
         return nil;
@@ -438,7 +411,6 @@ void FlexApplyLayoutParam(YGLayout* layout,
         }
     }
     
-    // 关联 "name" 变量
     if(self.name.length>0){
         @try{
             view.viewAttrs.name = self.name ;
@@ -453,31 +425,13 @@ void FlexApplyLayoutParam(YGLayout* layout,
         }
     }
     
-    
-//    [owner setValue:@"hfhfhfh" forKey:@"input"];
-    
-    
-    // 绑定点击事件
     if(self.onPress.length>0){
         SEL sel = NSSelectorFromString(self.onPress);
         if(sel!=nil){
-            // 获取所有的方法
-//            unsigned int count;
-//            Method *methods = class_copyMethodList([owner class], &count);
-//            for (int i = 0; i < count; i++)
-//            {
-//                Method method = methods[i];
-//                SEL selector = method_getName(method);
-//                NSString *name = NSStringFromSelector(selector);
-//
-//                NSLog(@"方法 名字 ==== %@",name);
-//            }
-            // loginActionWithSender
             if([owner respondsToSelector:sel]){
                 UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc]initWithTarget:owner action:sel];
                 tap.cancelsTouchesInView = NO;
                 tap.delaysTouchesBegan = NO;
-                view.tag = 1000;
                 [view addGestureRecognizer:tap];
             }else{
                 NSLog(@"Flexbox: owner %@ not respond %@", [owner class] , self.onPress);
@@ -490,6 +444,7 @@ void FlexApplyLayoutParam(YGLayout* layout,
     [view configureLayoutWithBlock:^(YGLayout* layout){
         
         layout.isEnabled = YES;
+        layout.isIncludedInLayout = YES;
         
         NSArray<FlexAttr*>* layoutParam = self.layoutParams ;
 
@@ -548,7 +503,7 @@ void FlexApplyLayoutParam(YGLayout* layout,
     [owner postCreateView:view];
     
     if(view.isHidden){
-        view.yoga.isIncludedInLayout = NO ;
+        [view enableFlexLayout:NO];
     }
     
     return view;
@@ -567,7 +522,7 @@ void FlexApplyLayoutParam(YGLayout* layout,
         
         for(e=s;e<str.length;e++){
             unichar c = [str characterAtIndex:e];
-            if(c==';')
+            if(c==',')
                 break;
             if(c=='\\')
                e++;
@@ -584,35 +539,6 @@ void FlexApplyLayoutParam(YGLayout* layout,
     }
     return result;
 }
-//用逗号分隔
-+(NSArray*)seperateBySemicolon:(NSString*)str
-    {
-        NSMutableArray* result = [NSMutableArray array];
-        
-        int s = 0;
-        int e;
-        
-        while (s<str.length) {
-            
-            for(e=s;e<str.length;e++){
-                unichar c = [str characterAtIndex:e];
-                if(c==';')
-                break;
-                if(c=='\\')
-                e++;
-            }
-            if(e>=str.length){
-                [result addObject:[str substringFromIndex:s]];
-                break;
-            }
-            if(e>s){
-                NSRange range = NSMakeRange(s,e-s);
-                [result addObject:[str substringWithRange:range]];
-            }
-            s=e+1;
-        }
-        return result;
-    }
 //
 +(unichar)transChar:(unichar)c
 {
@@ -657,7 +583,6 @@ void FlexApplyLayoutParam(YGLayout* layout,
     NSMutableArray* result = [NSMutableArray array];
     
     NSArray* parts = [FlexNode seperateByComma:param];
-    
     NSCharacterSet* whiteSet = [NSCharacterSet whitespaceAndNewlineCharacterSet] ;
     
     for (NSString* part in parts)
@@ -665,39 +590,6 @@ void FlexApplyLayoutParam(YGLayout* layout,
         NSRange range = [part rangeOfString:@":"];
         if(range.length == 0)
             continue;
-        
-        NSString* s1 = [part substringToIndex:range.location];
-        NSString* s2 = [part substringFromIndex:range.location+1];
-        
-        FlexAttr* attr = [[FlexAttr alloc]init];
-        attr.name = [s1 stringByTrimmingCharactersInSet:whiteSet];
-        attr.value = [s2 stringByTrimmingCharactersInSet:whiteSet];
-        attr.value = [FlexNode transString:attr.value];
-        
-        if(attr.isValid){
-            [result addObject:attr];
-        }
-    }
-    
-    return [result copy];
-}
-
-+(NSArray*)parseStringParamsBySemicolon:(NSString*)param
-{
-    if( param.length==0 )
-    return nil;
-    
-    NSMutableArray* result = [NSMutableArray array];
-    
-    NSArray* parts = [FlexNode seperateBySemicolon:param];
-    
-    NSCharacterSet* whiteSet = [NSCharacterSet whitespaceAndNewlineCharacterSet] ;
-    
-    for (NSString* part in parts)
-    {
-        NSRange range = [part rangeOfString:@":"];
-        if(range.length == 0)
-        continue;
         
         NSString* s1 = [part substringToIndex:range.location];
         NSString* s2 = [part substringFromIndex:range.location+1];
@@ -741,7 +633,7 @@ void FlexApplyLayoutParam(YGLayout* layout,
     GDataXMLNode* attr = [element attributeForName:@"attr"];
     if(attr){
         NSString* param = [attr stringValue];
-        node.viewAttrs = [FlexNode parseStringParamsBySemicolon:param];
+        node.viewAttrs = [FlexNode parseStringParams:param];
     }
     
     // children
@@ -1156,7 +1048,7 @@ static NSAttributedString* createAttributedText(FlexNode* node,
             if( color!=nil){
                 [dict setObject:color forKey:NSForegroundColorAttributeName];
             }
-        }else if( [attr.name isEqualToString:@"backgroundColor"]){
+        }else if( [attr.name isEqualToString:@"bgColor"]){
             UIColor* color = colorFromString(attr.value, owner);
             if( color!=nil){
                 [dict setObject:color forKey:NSBackgroundColorAttributeName];

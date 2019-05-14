@@ -72,7 +72,7 @@ static NameValue _gcontentModes[] =
 
 #pragma mark - attribute
 
-FLEXSET(backgroundColor)
+FLEXSET(bgColor)
 {
     UIColor* clr = colorFromString(sValue,owner) ;
     if(clr!=nil){

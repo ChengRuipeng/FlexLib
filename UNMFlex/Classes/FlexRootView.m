@@ -49,7 +49,7 @@ static NSInteger _compareInputView(UIView * _Nonnull f,
     
     UIView* view = [[viewCls alloc]init];
     
-    view.yoga.isEnabled = YES;
+    [view enableFlexLayout:YES];
     
     if(layoutAttrs.count > 0){
         [view setLayoutAttrStrings:layoutAttrs];
@@ -248,7 +248,8 @@ static NSInteger _compareInputView(UIView * _Nonnull f,
         _safeArea = UIEdgeInsetsMake(0, 0, 0, 0);
         _lastConfigFrame = CGRectZero;
         _bChildDirty = NO;
-        self.yoga.isEnabled = YES;
+        
+        [self enableFlexLayout:YES];
     }
     return self;
 }
@@ -286,7 +287,6 @@ static NSInteger _compareInputView(UIView * _Nonnull f,
             [root addSubview:sub];
         }
     }
-    root.yoga.isEnabled = YES;
     return root;
 }
 +(FlexRootView*)loadWithNodeFile:(NSString*)resName
@@ -312,12 +312,9 @@ static NSInteger _compareInputView(UIView * _Nonnull f,
         
         if(sub != nil && ![sub isKindOfClass:[FlexModalView class]])
         {
-            
-            NSLog(@"addSubviewaddSubviewaddSubviewaddSubviewaddSubview");
             [root addSubview:sub];
         }
     }
-    root.yoga.isEnabled = YES;
     return root;
 }
 
@@ -376,7 +373,7 @@ static NSInteger _compareInputView(UIView * _Nonnull f,
         BOOL n = [[change objectForKey:@"new"] boolValue];
         BOOL o = [[change objectForKey:@"old"] boolValue];
         if(n!=o){
-            object.yoga.isIncludedInLayout = !n;
+            [object enableFlexLayout:!n];
             [object markDirty];
         }
     }else if( context == gObserverText ){
@@ -447,16 +444,16 @@ static NSInteger _compareInputView(UIView * _Nonnull f,
         return;
     }
     
-    NSLog(@"Flexbox: FlexRootView layouting");
+    //NSLog(@"Flexbox: FlexRootView layouting");
 
     _bInLayouting = YES;
     _lastConfigFrame = _thisConfigFrame;
     
-    YGDimensionFlexibility option = 0 ;
+    enum YGDimensionFlexibility option = 0 ;
     if(self.flexibleWidth)
         option |= YGDimensionFlexibilityFlexibleWidth ;
     if(self.flexibleHeight)
-        option |= YGDimensionFlexibilityFlexibleHeigth ;
+        option |= YGDimensionFlexibilityFlexibleHeight ;
     
     CGRect rcOld = self.frame;
     
