@@ -19,6 +19,7 @@
 {
     self = [super init];
     if (self) {
+        self.yoga.isIncludedInLayout=NO;
     }
     return self;
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53F9762A3B7FD1E295A3ACEF /* Pods_FlexLib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F399040DE88BBD2F2E407B /* Pods_FlexLib_Example.framework */; };
 		58782A908180548750A1FE7A /* Pods_FlexLib_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF5D4D82057BA2F2195E3B3 /* Pods_FlexLib_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -129,6 +128,7 @@
 		D2EDA724214B8B5C00B6A26D /* TestCollectionViewVC.xml in Resources */ = {isa = PBXBuildFile; fileRef = D2EDA723214B8B5C00B6A26D /* TestCollectionViewVC.xml */; };
 		D2EDA727214B8CC900B6A26D /* TestCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D2EDA726214B8CC900B6A26D /* TestCollectionCell.m */; };
 		D2EDA729214B8D7400B6A26D /* TestCollectionCell.xml in Resources */ = {isa = PBXBuildFile; fileRef = D2EDA728214B8D7400B6A26D /* TestCollectionCell.xml */; };
+		E9CCE710DCFA868DDC885E4D /* Pods_FlexLib_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3F399040DE88BBD2F2E407B /* Pods_FlexLib_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -332,7 +332,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				53F9762A3B7FD1E295A3ACEF /* Pods_FlexLib_Example.framework in Frameworks */,
+				E9CCE710DCFA868DDC885E4D /* Pods_FlexLib_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,6 +754,7 @@
 					};
 					D210B7EA20189A5200166DA7 = {
 						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 682K59ZQJ3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1135,6 +1136,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlexLib/FlexLib-Prefix.pch";
 				INFOPLIST_FILE = "FlexLib/FlexLib-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hpbr.bosszhipin11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1155,6 +1157,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlexLib/FlexLib-Prefix.pch";
 				INFOPLIST_FILE = "FlexLib/FlexLib-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hpbr.bosszhipin11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1225,11 +1228,12 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: MAOSHENG YANG (6WU5UQCBXN)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 682K59ZQJ3;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1269,12 +1273,13 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 4ZF859MBSZ;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

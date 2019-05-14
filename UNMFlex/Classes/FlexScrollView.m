@@ -44,7 +44,7 @@ static void* gObserverContentOffset = &gObserverContentOffset;
         
         // 占位的view
         _holder = [[UIView alloc]init];
-        [_holder enableFlexLayout:YES];
+        _holder.yoga.isEnabled = YES;
         [super addSubview:_holder];
         
         // 构造view tree

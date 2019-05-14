@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'FlexLib'
-  s.version          = '2.3.1'
+  s.name             = 'UNMFlex'
+  s.version          = '5.0.0'
   s.summary          = 'An obj-c flex layout framework for IOS'
 
 # This description is used to generate tags and improve search results.
@@ -21,19 +21,19 @@ Pod::Spec.new do |s|
 It's a layout framework based on yoga engine. The main purpose is to provide easy and fast usage.
                        DESC
 
-  s.homepage         = 'https://github.com/zhenglibao/FlexLib'
+  s.homepage         = 'https://github.com/ChengRuipeng/UNMFlex'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '798393829@qq.com' => '798393829@qq.com' }
-  s.source           = { :git => 'https://github.com/zhenglibao/FlexLib.git', :tag => s.version.to_s }
+  s.author           = { '974098768@qq.com' => '974098768@qq.com' }
+  s.source           = { :git => 'https://github.com/ChengRuipeng/UNMFlex.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'FlexLib/Classes/**/*'
+  s.source_files = 'UNMFlex/Classes/**/*'
   
   s.resource_bundles = {
-     'FlexLib' => ['FlexLib/Assets/*']
+     'UNMFlex' => ['UNMFlex/Assets/*']
   }
 
   # s.frameworks = 'UIKit', 'MapKit'
@@ -44,7 +44,7 @@ It's a layout framework based on yoga engine. The main purpose is to provide eas
   #s.private_header_files = 'FlexLib/Classes/private/*.h'
   #s.public_header_files = 'FlexLib/Classes/*.h'
 
-  non_arc_files   = 'FlexLib/Classes/GDataXMLNode.{h,m}'
+  non_arc_files   = 'UNMFlex/Classes/GDataXMLNode.{h,m}'
   s.exclude_files = non_arc_files
   s.subspec 'no-arc' do |sna|
     sna.requires_arc = false
