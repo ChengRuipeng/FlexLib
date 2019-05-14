@@ -1,35 +1,27 @@
 PODS:
-  - Expecta (1.0.6)
-  - FlexLib (2.3.1):
-    - FlexLib/no-arc (= 2.3.1)
+  - UNMFlex (5.0.0):
+    - UNMFlex/no-arc (= 5.0.0)
     - Yoga (= 1.14.0)
-  - FlexLib/no-arc (2.3.1):
+  - UNMFlex/no-arc (5.0.0):
     - Yoga (= 1.14.0)
-  - Specta (1.0.7)
   - Yoga (1.14.0)
 
 DEPENDENCIES:
-  - Expecta
-  - FlexLib (from `../`)
-  - Specta
+  - UNMFlex (from `../`)
   - Yoga (= 1.14.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - Expecta
-    - Specta
     - Yoga
 
 EXTERNAL SOURCES:
-  FlexLib:
+  UNMFlex:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
-  FlexLib: ad404bacdd22ff57a3e64ff0082d454eafb5086a
-  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+  UNMFlex: bc7025d16654f34cab02fc31cb651bcd076e1092
   Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
 
-PODFILE CHECKSUM: 7392f6d8a096ece69bedd4ef3d51f83a0e25a1db
+PODFILE CHECKSUM: b10912c3976ae4aa3dfaca5e3f1b93d73084d06e
 
 COCOAPODS: 1.6.1

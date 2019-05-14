@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UIView
+    layout="
+    flex:1;
+    justifyContent:center;
+    alignItems:center"
+    attr="bgColor:white">
+    <UILabel layout="marginTop:20"
+    attr="@:system/buttonText;text:justifyContent Demo"/>
+</UIView>

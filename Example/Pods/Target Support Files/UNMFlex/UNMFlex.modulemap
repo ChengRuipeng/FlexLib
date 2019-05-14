@@ -1,0 +1,6 @@
+framework module UNMFlex {
+  umbrella header "UNMFlex-umbrella.h"
+
+  export *
+  module * { export * }
+}
