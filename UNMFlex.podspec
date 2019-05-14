@@ -22,11 +22,9 @@ It's a layout framework based on yoga engine. The main purpose is to provide eas
                        DESC
 
   s.homepage         = 'https://github.com/ChengRuipeng/UNMFlex'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '974098768@qq.com' => '974098768@qq.com' }
   s.source           = { :git => 'https://github.com/ChengRuipeng/UNMFlex.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
@@ -35,14 +33,12 @@ It's a layout framework based on yoga engine. The main purpose is to provide eas
   s.resource_bundles = {
      'UNMFlex' => ['UNMFlex/Assets/*']
   }
-
-  # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Yoga', '1.6.0'
+  
+  s.dependency 'Yoga', '1.14.0'
 
   s.library = 'xml2'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '/usr/include/libxml2' }
-  #s.private_header_files = 'FlexLib/Classes/private/*.h'
-  #s.public_header_files = 'FlexLib/Classes/*.h'
+
 
   non_arc_files   = 'UNMFlex/Classes/GDataXMLNode.{h,m}'
   s.exclude_files = non_arc_files

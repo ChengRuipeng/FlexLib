@@ -1,14 +1,14 @@
 PODS:
   - UNMFlex (5.0.0):
     - UNMFlex/no-arc (= 5.0.0)
-    - Yoga (= 1.6.0)
+    - Yoga (= 1.14.0)
   - UNMFlex/no-arc (5.0.0):
-    - Yoga (= 1.6.0)
-  - Yoga (1.6.0)
+    - Yoga (= 1.14.0)
+  - Yoga (1.14.0)
 
 DEPENDENCIES:
   - UNMFlex (from `../`)
-  - Yoga (= 1.6.0)
+  - Yoga (= 1.14.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -19,9 +19,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UNMFlex: 355b64477badcff8e95f1607235a3b47a8876eb0
-  Yoga: 81670877477311136b1b3f69a6307ce62e1c89cf
+  UNMFlex: bc7025d16654f34cab02fc31cb651bcd076e1092
+  Yoga: cff67a400f6b74dc38eb0bad4f156673d9aa980c
 
-PODFILE CHECKSUM: b7bcef72d7ef04f54e531b8deb6302f9d6409cc3
+PODFILE CHECKSUM: b10912c3976ae4aa3dfaca5e3f1b93d73084d06e
 
 COCOAPODS: 1.6.1

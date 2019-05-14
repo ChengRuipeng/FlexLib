@@ -2,6 +2,6 @@ use_frameworks!
 
 target 'UNMFlex_Example' do
   pod 'UNMFlex', :path => '../'
-  pod 'Yoga', '1.6.0'
+  pod 'Yoga', '1.14.0'
   
 end
