@@ -763,6 +763,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",
@@ -1135,7 +1136,7 @@
 				GCC_PREFIX_HEADER = "FlexLib/FlexLib-Prefix.pch";
 				INFOPLIST_FILE = "FlexLib/FlexLib-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hpbr.bosszhipin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hpbr.bosszhipin11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "df643b45-037d-4c9d-8d9b-792927d94a91";
 				PROVISIONING_PROFILE_SPECIFIER = zhipinDev;
@@ -1148,16 +1149,17 @@
 			baseConfigurationReference = 7B47CA40CE36ADABF2EC0262 /* Pods-FlexLib_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 682K59ZQJ3;
+				DEVELOPMENT_TEAM = 4ZF859MBSZ;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlexLib/FlexLib-Prefix.pch";
 				INFOPLIST_FILE = "FlexLib/FlexLib-Info.plist";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hpbr.bosszhipin;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hpbr.bosszhipin11;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "df643b45-037d-4c9d-8d9b-792927d94a91";
-				PROVISIONING_PROFILE_SPECIFIER = zhipinDev;
+				PROVISIONING_PROFILE_SPECIFIER = "XC Ad Hoc: *";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
